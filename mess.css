@@ -1,0 +1,123 @@
+body {
+    background-color: #f0f0f0;
+}
+
+#mess {
+    display: none;
+}
+
+.checker {
+    position : fixed;
+    bottom   : 12vh;
+    right    : 4.5vw;
+    font-size: 2rem;
+}
+
+.checker::before {
+    padding         : 1rem;
+    border-radius   : 50%;
+    background-color: #ffffff;
+    transition      : all 0.8s ease-in-out;
+}
+
+.checker:hover::before {
+    cursor          : pointer;
+    background-color: #b4b3b3;
+    transition      : all 0.8s ease-in-out;
+}
+
+.messBox {
+    position        : fixed;
+    display         : flex;
+    bottom          : -20rem;
+    right           : 14vw;
+    height          : 20rem;
+    width           : 15rem;
+    background-color: #ffffff;
+    border-radius   : 5px;
+    border          : 0.1px solid #979797;
+    flex-direction  : column;
+    opacity         : 0;
+    transition      : all 0.8s ease-in-out;
+}
+
+.messHeader {
+    display         : flex;
+    width           : 15rem;
+    height          : 3rem;
+    background-color: #ebebeb;
+}
+
+.messContent {
+    display: flex;
+    width  : 15rem;
+    height : 14rem;
+}
+
+.messFooter {
+    align-items: center;
+    justify-content: center;
+    display         : flex;
+    width           : 15rem;
+    height          : 3rem;
+    background-color: #dadada;
+}
+
+#mess:checked+.messBox {
+    opacity: 1;
+    bottom : 0;
+}
+
+.messFooter>input:first-of-type{
+    outline:none;
+    border:none;
+    border-radius: 50px;
+    padding: 0.5rem;
+    padding-left: 0.2rem;
+}
+.animationBox{
+    position: fixed;
+    right: 15vw;
+    bottom: 8vh;
+    width: 4rem;
+    height: 2rem;
+    border-radius   : 50px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    transition      : all 0.4s ease-in-out;
+}
+.animationBox>*:nth-child(n+1){
+    height:0.5rem;
+    width: 0.5rem;
+    border-radius: 50px;
+    background-color: #ffffff;
+    margin: 0 0.3rem 0.6rem 0.3rem;
+    animation: bujanie_jajek 1s infinite;
+}
+#one{
+    animation-delay: 0s;
+}
+#two{
+    animation-delay: -.2s;
+}
+#three{
+    animation-delay: -.4s;
+}
+@keyframes bujanie_jajek{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(0.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#messText:focus + .animationBox{
+    opacity: 1;
+}

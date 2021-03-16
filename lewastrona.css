@@ -1,0 +1,67 @@
+.toczegobrakowalo {
+  z-index: -2;
+  position: fixed;
+  left: 0;
+  top: 79px;
+  bottom: 0;
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+.toczegobrakowalo > * > * {
+  padding-left: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+.toczegobrakowalo > :nth-child(-n+2) > *:hover {
+  background-color: rgb(206, 201, 201);
+  border-radius: 1rem;
+}
+.toczegobrakowalo > :nth-child(-n+2) > * > * {
+  background-color: white;
+  border-radius: 100px;
+  padding: 0.7rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.toczegobrakowalo > :nth-child(-n+2) > * > :nth-child(1) {
+  padding-right: 1rem;
+  margin: 0.5rem 0;
+}
+.lewa {
+  position: fixed;
+  left: 0;
+  top: 79px;
+  height: 30rem;
+  width: 12rem;
+  line-height: 200%;
+}
+.skroty {
+  border-top: 2px solid rgb(112, 112, 112);
+  padding-top: 2rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  width: 12rem;
+  height: 26rem;
+}
+.bezpodswietlenia:hover {
+  background-color: white;
+}
+.lewydol {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 12rem;
+  height: 2rem;
+  display: flex;
+}
+.kolko > :nth-child(1) {
+  font-size: 80%;
+  padding: 1rem 1rem;
+  margin: 3px 0;
+  width: 17px;
+}

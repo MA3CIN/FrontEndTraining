@@ -1,0 +1,89 @@
+.header{
+    position:  fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+.header > * {
+    border-radius: 10px;
+    padding: 1rem 3vw 1rem;
+}
+
+.header>*:hover{
+    background-color: rgb(202, 206, 202);
+    
+}
+.header>*:focus{
+    color: rgb(60, 156, 194);
+    transform:scale(1.1);
+    transition: 0.21s;
+}
+.leftheader {
+    padding: 1rem 3vw 1rem 2vw;
+    position: fixed;
+    left: 0;
+    top:0;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.sasiad{
+    top: -10rem;
+    left: 0;
+    width: 17rem;
+    height: 9rem;
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#lewysearch:focus~.sasiad{
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+.polesearch:hover{
+    cursor:pointer;
+}
+.polesearch::after{
+     position: absolute; 
+    padding: 1rem;
+     left: 0;
+    top: 0; 
+    height: 5rem;
+    width: 5rem;
+    background-color: aqua;
+}
+
+.polesearch{
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    width: 8rem;
+    background-color: rgb(219, 219, 219);
+    border-radius: 20px;
+}
+#lewysearch{
+    background-color: rgb(187, 187, 187);
+    margin-left: 0.4rem;
+    height: 1.4rem;
+    border-radius: 20px;
+    font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  outline: none;
+}
